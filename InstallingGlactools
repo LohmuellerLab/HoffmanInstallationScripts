@@ -1,0 +1,17 @@
+qrsh
+
+git clone --depth 1 https://github.com/grenaud/glactools.git
+
+cd glactools/
+
+module load gcc/7.2.0
+
+module load cmake
+
+module load xz/5.2.3
+
+sed -i 's/LDFLAGS = -lpthread/LDFLAGS = -L${XZ_LIB} -lpthread/g' Makefile
+
+make CPPFLAGS="-I$XZ_INC -I$PWD/libgab/gzstream"
+
+
