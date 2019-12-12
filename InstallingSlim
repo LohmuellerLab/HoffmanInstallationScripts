@@ -1,3 +1,4 @@
+# This script is for SLiM 3.2.1. Might not work for newer version of SLiM. 
 qrsh -l h_data=8G
 cd ~
 rm SLiM.zip
