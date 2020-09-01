@@ -4,3 +4,8 @@ module load gsl
 module load openblas
 make CFLAGS="-I${GSL_INC} -I${OPENBLAS_INC}" LDFLAGS="-L${GSL_LIB} -L${OPENBLAS_LIB}"
 make install
+
+# to install admixr:
+## log out and log back in before this next part
+# $ module load R/3.6.0 # in bash
+# > install.packages("admixr") # in R
